@@ -1,0 +1,6 @@
+<settings>
+	<!-- These settings will ONLY be loaded when the application is compiled in debug mode. -->
+	<text name="enable:partner_view" value="false" />
+	<!-- Make the panel sprites opaque, so we can see the dimensions. -->
+	<text name="panel:show_bg" value="false" />
+</settings>

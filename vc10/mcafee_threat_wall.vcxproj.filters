@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Source Files\app">
+      <UniqueIdentifier>{4d0b790f-9463-4ae2-9b8e-9c3402cd34f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\model">
+      <UniqueIdentifier>{cf88166a-8273-4f14-8c7b-c37419f5ebb4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\query">
+      <UniqueIdentifier>{003ec986-758d-4806-9ba8-2e44814d69a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ui">
+      <UniqueIdentifier>{c7828991-3ea5-4444-9e44-1867fac5c31e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\events">
+      <UniqueIdentifier>{00d3ccfe-030e-40be-8494-fc2c63155d3d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ui\table\button">
+      <UniqueIdentifier>{534dbd5a-7817-4534-afc7-c77b12b7b08e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\container">
+      <UniqueIdentifier>{5d6c8ac3-b574-4106-9cf3-e1e70b488862}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\util">
+      <UniqueIdentifier>{d329b4f6-148b-4db1-9caa-8ab129680adf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\touch">
+      <UniqueIdentifier>{29a667f6-b33f-40da-a391-5bb86f0ecb43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\math">
+      <UniqueIdentifier>{083bbb17-3678-4519-a4f6-cb9981112fc2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ui\video_player">
+      <UniqueIdentifier>{c841d1d4-7391-409f-a4b8-e5d41c9d930e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ui\ticker">
+      <UniqueIdentifier>{d6154736-1291-423d-8d43-1f6835f428e6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\app\globals.h">
+      <Filter>Source Files\app</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\app\app_defs.h">
+      <Filter>Source Files\app</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\query\query_handler.h">
+      <Filter>Source Files\query</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\events\media_events.h">
+      <Filter>Source Files\events</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ui\table\button\image_button.h">
+      <Filter>Source Files\ui\table\button</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\container\range.h">
+      <Filter>Source Files\container</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\query\media_query.h">
+      <Filter>Source Files\query</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\touch\momentum.h">
+      <Filter>Source Files\touch</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\math\circle.h">
+      <Filter>Source Files\math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\util\time_seconds.h">
+      <Filter>Source Files\util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\app\threat_app.h">
+      <Filter>Source Files\app</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\model\movie_model.h">
+      <Filter>Source Files\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ui\ticker\ticker_view.h">
+      <Filter>Source Files\ui\ticker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ui\ticker\ticker_item.h">
+      <Filter>Source Files\ui\ticker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\model\ticker_model.h">
+      <Filter>Source Files\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\query\news_query.h">
+      <Filter>Source Files\query</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Resources.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="$(DS_PLATFORM)\vc10\FrameworkResources.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\app\globals.cpp">
+      <Filter>Source Files\app</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\app\app_defs.cpp">
+      <Filter>Source Files\app</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\query\query_handler.cpp">
+      <Filter>Source Files\query</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\events\media_events.cpp">
+      <Filter>Source Files\events</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ui\table\button\image_button.cpp">
+      <Filter>Source Files\ui\table\button</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\container\range.cpp">
+      <Filter>Source Files\container</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\query\media_query.cpp">
+      <Filter>Source Files\query</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\touch\momentum.cpp">
+      <Filter>Source Files\touch</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\math\circle.cpp">
+      <Filter>Source Files\math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\util\time_seconds.cpp">
+      <Filter>Source Files\util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\app\threat_app.cpp">
+      <Filter>Source Files\app</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ui\ticker\ticker_view.cpp">
+      <Filter>Source Files\ui\ticker</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ui\ticker\ticker_item.cpp">
+      <Filter>Source Files\ui\ticker</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\query\news_query.cpp">
+      <Filter>Source Files\query</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

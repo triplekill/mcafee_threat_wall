@@ -1,0 +1,33 @@
+<settings>
+	<!-- Available fonts: 
+	const std::string		_FONT_FRUTIGER_EXTRA_BOLD_CONDENSED("frutiger-extra-bold-condensed");
+	const std::string		_FONT_FRUTIGER_BOLD_CONDENSED("frutiger-bold-condensed");
+	const std::string		_FONT_FRUTIGER_ROMAN("frutiger-roman");
+	const std::string		_FONT_FRUTIGER_BLACK_CONDENSED("frutiger-black-condensed");
+	const std::string		_FONT_FRUTIGER_BLACK_ITALIC("frutiger-black-italic");
+	const std::string		_FONT_FRUTIGER_BLACK("frutiger-black");
+	const std::string		_FONT_FRUTIGER_BOLD("frutiger-bold");
+	const std::string		_FONT_FRUTIGER_BOLD_ITALIC("frutiger-bold-italic");
+	const std::string		_FONT_FRUTIGER_CONDENSED("frutiger-condensed");
+	const std::string		_FONT_FRUTIGER_ITALIC("frutiger-italic");
+	const std::string		_FONT_FRUTIGER_LIGHT("frutiger-light");
+	const std::string		_FONT_FRUTIGER_ROMAN_55("frutiger-roman-55");
+	const std::string		_FONT_FRUTIGER_LIGHT_CONDENSED("frutiger-light-condensed");
+	const std::string		_FONT_FRUTIGER_LIGHT_ITALIC("frutiger-light-italic");
+	const std::string		_FONT_FRUTIGER_ULTRA_BLACK("frutiger-ultra-black");
+
+	-->
+
+	<!-- Ticker -->
+		<text  name="ticker:date:name" value="frutiger-bold" />
+		<float name="ticker:date:size" value="10" />
+		<float name="ticker:date:leading" value="0.75" />
+		<color name="ticker:date:color" r="255" g="0" b="0" />
+		
+		<text  name="ticker:headline:name" value="frutiger-bold" />
+		<float name="ticker:headline:size" value="10" />
+		<float name="ticker:headline:leading" value="0.75" />
+		<color name="ticker:headline:color" r="255" g="255" b="255" />
+	<!-- -->
+
+</settings>

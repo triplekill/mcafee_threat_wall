@@ -1,0 +1,36 @@
+<settings>
+	<!-- Example engine_settings.xml file.  -->
+	<text name="project_path" value="mcafee\threat" />
+ 	<int name="num_clients" value="1" />
+
+	<text name="server:ip" value="239.255.42.58" />
+	<int name="server:send_port" value="10370" />
+	<int name="server:listen_port" value="10371" />
+
+	<!-- Set to true if you want your app to receive the tuio obects
+		via objectBegan() etc. -->
+	<text name="tuio:receive_objects" value="false" />
+
+	<size name="world_dimensions" x="1920" y="1080" />
+	<rect name="local_rect" l="0" r="1920" t="0" b="1080" />
+
+	<size name="touch_overlay:dimensions" x="1920" y="1080" />
+	<size name="touch_overlay:offset" x="0" y="0" />
+	<text name="touch_overlay:debug" value="true" />
+
+	<float name="camera:fov" value="41.95" />
+	<size  name="camera:z_clip" x="-1000" y="10000" />
+	<text  name="camera:type" value="ortho" /> <!-- possible values: ortho or perspective -->
+	
+	<text name="resource_location" value="%USERPROFILE%\Documents\downstream\mcafee\" />
+	<text name="resource_db" value="firewall.sqlite" />
+
+	<float name="frame_rate" value="60" />
+	<float name="tap_threshold" value="20" />
+
+	<text name="screen:mode" value="window" />		<!-- full or window (default) -->
+	<text name="screen:always_on_top" value="false" />
+	<text name="screen:title" value="MCAFEE THREAT WALL" />	<!-- title of the window -->
+    <point name="window_pos" x="40.0" y="40.0" />
+
+</settings>

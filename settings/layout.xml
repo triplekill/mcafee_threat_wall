@@ -1,0 +1,15 @@
+<settings>
+
+	<color name="mcafee:red" r="255" g="0" b="0" />
+
+	<!-- TICKER -->
+	<!-- relative overall position -->
+	<float name="ticker:y_pos" value="0.9" />
+	<float name="ticker:speed" value="2.0" />
+	<!-- in pixels -->
+	<float name="ticker:background:y_offset" value="-8.0" />
+	<float name="ticker:background:height" value="30.0" />
+	<float name="ticker:line:width" value="1.0" />
+	<!-- -->
+	
+</settings>
