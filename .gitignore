@@ -11,3 +11,11 @@
 *.lai
 *.la
 *.a
+
+/vc10/libzmq.dll
+/vc10/mcafee_threat_wall.opensdf
+/vc10/mcafee_threat_wall.sdf
+/vc10/mcafee_threat_wall.suo
+/vc10/mcafee_threat_wall.vcxproj.user
+/vc10/Debug
+/vc10/ipch
