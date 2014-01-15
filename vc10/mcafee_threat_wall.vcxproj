@@ -122,12 +122,14 @@
     <ClInclude Include="..\src\container\range.h" />
     <ClInclude Include="..\src\events\media_events.h" />
     <ClInclude Include="..\src\math\circle.h" />
+    <ClInclude Include="..\src\model\country_time..h" />
     <ClInclude Include="..\src\model\movie_model.h" />
     <ClInclude Include="..\src\model\ticker_model.h" />
     <ClInclude Include="..\src\query\media_query.h" />
     <ClInclude Include="..\src\query\news_query.h" />
     <ClInclude Include="..\src\query\query_handler.h" />
     <ClInclude Include="..\src\touch\momentum.h" />
+    <ClInclude Include="..\src\ui\map\map_view.h" />
     <ClInclude Include="..\src\ui\ticker\ticker_item.h" />
     <ClInclude Include="..\src\ui\ticker\ticker_view.h" />
     <ClInclude Include="..\src\util\time_seconds.h" />
@@ -147,6 +149,7 @@
     <ClCompile Include="..\src\query\news_query.cpp" />
     <ClCompile Include="..\src\query\query_handler.cpp" />
     <ClCompile Include="..\src\touch\momentum.cpp" />
+    <ClCompile Include="..\src\ui\map\map_view.cpp" />
     <ClCompile Include="..\src\ui\ticker\ticker_item.cpp" />
     <ClCompile Include="..\src\ui\ticker\ticker_view.cpp" />
     <ClCompile Include="..\src\util\time_seconds.cpp" />

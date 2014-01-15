@@ -49,6 +49,9 @@
     <Filter Include="Source Files\ui\ticker">
       <UniqueIdentifier>{d6154736-1291-423d-8d43-1f6835f428e6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\ui\map">
+      <UniqueIdentifier>{194364c9-e29e-4b09-b0ee-d1e4697deb0c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\app\globals.h">
@@ -98,6 +101,12 @@
     </ClInclude>
     <ClInclude Include="..\src\query\news_query.h">
       <Filter>Source Files\query</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ui\map\map_view.h">
+      <Filter>Source Files\ui\map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\model\country_time..h">
+      <Filter>Source Files\model</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -150,6 +159,9 @@
     </ClCompile>
     <ClCompile Include="..\src\query\news_query.cpp">
       <Filter>Source Files\query</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ui\map\map_view.cpp">
+      <Filter>Source Files\ui\map</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -7,9 +7,17 @@
 	<float name="ticker:y_pos" value="0.9" />
 	<float name="ticker:speed" value="2.0" />
 	<!-- in pixels -->
-	<float name="ticker:background:y_offset" value="-8.0" />
+	<float name="ticker:background:y_offset" value="-9.0" />
 	<float name="ticker:background:height" value="30.0" />
 	<float name="ticker:line:width" value="1.0" />
 	<!-- -->
+	
+	<!-- MAP -->
+	<float name="map:y_offset" value="250"/>
+	
+	
+	<!-- logo and stuff -->
+	<point name="logo:offset" x="50" y="50" />
+	<point name="threat_title:offset" x="50" y="170" />
 	
 </settings>

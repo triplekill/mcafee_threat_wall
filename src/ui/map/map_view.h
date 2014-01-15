@@ -1,34 +1,32 @@
 #pragma once
-#ifndef UI_TICKER_TICKER_VIEW
-#define UI_TICKER_TICKER_VIEW
+#ifndef UI_MAP_MAP_VIEW
+#define UI_MAP_MAP_VIEW
 
 #include <ds/app/event_client.h>
-#include <ds/ui/sprite/image.h>
+#include <ds/ui/sprite/sprite.h>
 
 namespace mcafee {
 class Globals;
-class TickerItem;
 
 /**
  * \class mcafee::TableView
  * \brief The root superclass for the table.
  */
-class TickerView : public ds::ui::Sprite
+class MapView : public ds::ui::Sprite
 {
 public:
-	TickerView(Globals&);
+	MapView(Globals&);
 
 private:
 	void					onAppEvent(const ds::Event&);
 	virtual void			updateServer(const ds::UpdateParams&);
+	void					loadCountries();
 
 
 	typedef ds::ui::Sprite	inherited;
 	Globals&				mGlobals;
 	ds::EventClient			mEventClient;
 	float					mSpeed;
-
-	std::vector<TickerItem*>	mItems;
 
 };
 

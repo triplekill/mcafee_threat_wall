@@ -20,6 +20,10 @@ TickerView::TickerView( Globals& g)
 	float lineWidth = mEngine.getEngineCfg().getSettings(SETTINGS_LAYOUT).getFloat("ticker:line:width",0, 1.0f);
 
 
+	ds::ui::Sprite*			mBackground;
+	ds::ui::Sprite*			mTopLine;
+	ds::ui::Sprite*			mBotLine;
+
 	mBackground = new ds::ui::Sprite(mEngine);
 	addChild(*mBackground);
 	mBackground->enable(false);

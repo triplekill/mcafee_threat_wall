@@ -5,6 +5,7 @@
 #include <unordered_map>
 
 #include "model/ticker_model.h"
+#include "model/movie_model.h"
 
 namespace ds {
 namespace ui {
@@ -22,11 +23,12 @@ class SearchData;
 class Globals
 {
 public:
-	Globals(ds::ui::SpriteEngine&, std::vector<TickerModel>& ni);
+	Globals(ds::ui::SpriteEngine&, std::vector<MovieModel>& ml, std::vector<TickerModel>& ni);
 
 	ds::ui::SpriteEngine&			mEngine;
 
 	std::vector<TickerModel>&		mNewsItems;
+	std::vector<MovieModel>&		mMovieItems;
 
 private:
 	friend class ThreatApp;

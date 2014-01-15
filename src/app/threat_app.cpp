@@ -7,6 +7,7 @@
 #include <ds/ui/sprite/image.h>
 #include <ds/util/string_util.h>
 
+#include "ui/map/map_view.h"
 #include "ui/ticker/ticker_view.h"
 
 #include "app/app_defs.h"
@@ -23,7 +24,7 @@ namespace mcafee {
 
 ThreatApp::ThreatApp()
 		: mQueryEventHandler(mEngine, mMediaList, mNewsList)
-		, mGlobals(mEngine, mNewsList )
+		, mGlobals(mEngine, mMediaList, mNewsList )
 
 {
 	mEngine.loadSettings(SETTINGS_LAYOUT, "layout.xml");
@@ -56,6 +57,9 @@ ThreatApp::ThreatApp()
 
 void ThreatApp::setupServer() {
 	ds::ui::Sprite&		rootSprite = mEngine.getRootSprite();
+
+	MapView* mv = new MapView(mGlobals);
+	rootSprite.addChild(*mv);
 
 	TickerView* tv = new TickerView(mGlobals);
 	rootSprite.addChild(*tv);
