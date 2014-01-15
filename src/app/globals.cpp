@@ -20,10 +20,11 @@ const std::wstring				EMPTY_SZW;
 /**
  * \class mcafee::Globals
  */
-Globals::Globals(	ds::ui::SpriteEngine& e, std::vector<MovieModel>& ml, std::vector<TickerModel>& ni)
+Globals::Globals(	ds::ui::SpriteEngine& e, std::vector<MovieModel>& ml, std::vector<TickerModel>& ni, std::vector<LatestThreatModel>&	lt)
 		: mEngine(e)
 		, mMovieItems(ml)
 		, mNewsItems(ni)
+		, mLatestThreats(lt)
 {
 }
 

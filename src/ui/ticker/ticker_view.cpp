@@ -76,7 +76,7 @@ void mcafee::TickerView::updateServer( const ds::UpdateParams& p){
 	std::vector<TickerItem*> finishedItems;
 	float xp = 0.0f;
 	for (auto it = mItems.begin(); it < mItems.end(); ++it){
-		(*it)->move(-mSpeed, 0.0f);
+		(*it)->move(-dp, 0.0f);
 		xp = (*it)->getPosition().x + (*it)->getItemWidth();
 		if(xp < 0.0f){
 			finishedItems.push_back((*it));

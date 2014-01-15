@@ -9,6 +9,7 @@
 
 #include "ui/map/map_view.h"
 #include "ui/ticker/ticker_view.h"
+#include "ui/latest_threats/latest_threats_view.h"
 
 #include "app/app_defs.h"
 #include "events/media_events.h"
@@ -23,8 +24,8 @@ static bool			is_table(const ds::ui::SpriteEngine&);
 namespace mcafee {
 
 ThreatApp::ThreatApp()
-		: mQueryEventHandler(mEngine, mMediaList, mNewsList)
-		, mGlobals(mEngine, mMediaList, mNewsList )
+		: mQueryEventHandler(mEngine, mMediaList, mNewsList, mLatestThreats)
+		, mGlobals(mEngine, mMediaList, mNewsList, mLatestThreats )
 
 {
 	mEngine.loadSettings(SETTINGS_LAYOUT, "layout.xml");
@@ -63,6 +64,9 @@ void ThreatApp::setupServer() {
 
 	TickerView* tv = new TickerView(mGlobals);
 	rootSprite.addChild(*tv);
+
+	LatestThreatsView* ltv = new LatestThreatsView(mGlobals);
+	rootSprite.addChild(*ltv);
 
 }
 

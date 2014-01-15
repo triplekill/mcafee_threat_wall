@@ -28,9 +28,6 @@
     <Filter Include="Source Files\events">
       <UniqueIdentifier>{00d3ccfe-030e-40be-8494-fc2c63155d3d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\ui\table\button">
-      <UniqueIdentifier>{534dbd5a-7817-4534-afc7-c77b12b7b08e}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\container">
       <UniqueIdentifier>{5d6c8ac3-b574-4106-9cf3-e1e70b488862}</UniqueIdentifier>
     </Filter>
@@ -52,6 +49,9 @@
     <Filter Include="Source Files\ui\map">
       <UniqueIdentifier>{194364c9-e29e-4b09-b0ee-d1e4697deb0c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\ui\latest_threats">
+      <UniqueIdentifier>{a127f717-83e9-487d-98d5-3790e038366c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\app\globals.h">
@@ -65,9 +65,6 @@
     </ClInclude>
     <ClInclude Include="..\src\events\media_events.h">
       <Filter>Source Files\events</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\ui\table\button\image_button.h">
-      <Filter>Source Files\ui\table\button</Filter>
     </ClInclude>
     <ClInclude Include="..\src\container\range.h">
       <Filter>Source Files\container</Filter>
@@ -105,7 +102,25 @@
     <ClInclude Include="..\src\ui\map\map_view.h">
       <Filter>Source Files\ui\map</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\model\country_time..h">
+    <ClInclude Include="..\src\model\country_time.h">
+      <Filter>Source Files\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ui\map\country_view.h">
+      <Filter>Source Files\ui\map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ui\latest_threats\latest_threats_view.h">
+      <Filter>Source Files\ui\latest_threats</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ui\latest_threats\threat_item.h">
+      <Filter>Source Files\ui\latest_threats</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\model\latest_threat_model.h">
+      <Filter>Source Files\model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\query\threat_query.h">
+      <Filter>Source Files\query</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\model\threat_data_model.h">
       <Filter>Source Files\model</Filter>
     </ClInclude>
   </ItemGroup>
@@ -129,9 +144,6 @@
     </ClCompile>
     <ClCompile Include="..\src\events\media_events.cpp">
       <Filter>Source Files\events</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\ui\table\button\image_button.cpp">
-      <Filter>Source Files\ui\table\button</Filter>
     </ClCompile>
     <ClCompile Include="..\src\container\range.cpp">
       <Filter>Source Files\container</Filter>
@@ -162,6 +174,18 @@
     </ClCompile>
     <ClCompile Include="..\src\ui\map\map_view.cpp">
       <Filter>Source Files\ui\map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ui\map\country_view.cpp">
+      <Filter>Source Files\ui\map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ui\latest_threats\latest_threats_view.cpp">
+      <Filter>Source Files\ui\latest_threats</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ui\latest_threats\threat_item.cpp">
+      <Filter>Source Files\ui\latest_threats</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\query\threat_query.cpp">
+      <Filter>Source Files\query</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

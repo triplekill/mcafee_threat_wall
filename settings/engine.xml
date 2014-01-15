@@ -25,7 +25,7 @@
 	<text name="resource_location" value="%USERPROFILE%\Documents\downstream\mcafee\" />
 	<text name="resource_db" value="firewall.sqlite" />
 
-	<float name="frame_rate" value="60" />
+	<float name="frame_rate" value="120" />
 	<float name="tap_threshold" value="20" />
 
 	<text name="screen:mode" value="window" />		<!-- full or window (default) -->

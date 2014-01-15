@@ -2,10 +2,6 @@
 #ifndef MODEL_COUNTRY_TIME_H_
 #define MODEL_COUNTRY_TIME_H_
 
-#include <ds/util/bit_mask.h>
-
-#include <cinder/Vector.h>
-
 namespace mcafee {
 
 	class CountryTime {
@@ -13,7 +9,7 @@ namespace mcafee {
 
 		CountryTime(){};
 		const std::wstring&			getCountryCode() const { return mCountryCode;}
-		const std::wstring&			getImagePath() const { return mImagePath;} 
+		const std::string&			getImagePath() const { return mImagePath;} 
 		const std::wstring&			getCountryName() const { return mCountryName;} 
 		const ci::Vec3f&			getPosition() const { return mPosition; }
 		const ci::Vec3f&			getVirusPosition() const { return mVirusPosition; }
@@ -24,7 +20,7 @@ namespace mcafee {
 		friend class				MapView;
 
 		std::wstring				mCountryCode;
-		std::wstring				mImagePath;
+		std::string					mImagePath;
 		std::wstring				mCountryName;
 		ci::Vec3f					mPosition;
 		ci::Vec3f					mVirusPosition;

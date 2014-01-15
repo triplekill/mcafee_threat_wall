@@ -5,7 +5,7 @@
 	<!-- TICKER -->
 	<!-- relative overall position -->
 	<float name="ticker:y_pos" value="0.9" />
-	<float name="ticker:speed" value="2.0" />
+	<float name="ticker:speed" value="90.0" />
 	<!-- in pixels -->
 	<float name="ticker:background:y_offset" value="-9.0" />
 	<float name="ticker:background:height" value="30.0" />
@@ -17,7 +17,14 @@
 	
 	
 	<!-- logo and stuff -->
-	<point name="logo:offset" x="50" y="50" />
-	<point name="threat_title:offset" x="50" y="170" />
+	<point name="logo:offset" x="75" y="75" />
+	<float name="threat_title:offset" value="-20" />
+	
+	<!-- latest threats -->
+	<point name="latest:threat:offset" x="75" y="375" />
+	<float name="latest:threat:title_pad" value="30" />
+	<float name="latest:threat:touch_padding" value="10" />
+	<float name="latest:threat:y_padding" value="0" />
+	<color name="latest:threat:background" r="0" g="0" b="0" />
 	
 </settings>

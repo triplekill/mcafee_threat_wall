@@ -7,6 +7,7 @@
 #include <ds/thread/serial_runnable.h>
 #include "query/media_query.h"
 #include "query/news_query.h"
+#include "query/threat_query.h"
 
 // NOTE: Placing this include at the top gets a conflict
 // with cinder. Need to look into that.
@@ -24,7 +25,7 @@ namespace mcafee {
  */
 class QueryHandler {
 public:
-	QueryHandler(ds::ui::SpriteEngine&, std::vector<MovieModel>& movies, std::vector<TickerModel>& news);
+	QueryHandler(ds::ui::SpriteEngine&, std::vector<MovieModel>& movies, std::vector<TickerModel>& news, std::vector<LatestThreatModel>& lt);
 
 private:
 	void								onNodeMessage(const ds::NodeWatcher::Message&);
@@ -33,6 +34,7 @@ private:
 
 	void								onMediaQuery(MediaQuery&);
 	void								onNewsQuery(NewsQuery&);
+	void								onThreatQuery(ThreatQuery&);
 
 	ds::NodeWatcher						mNodeWatcher;
 
@@ -40,9 +42,11 @@ private:
 
 	std::vector<MovieModel>&			mMovieList;
 	std::vector<TickerModel>&			mNewsList;
+	std::vector<LatestThreatModel>&		mLatestThreats;
 
 	ds::SerialRunnable<MediaQuery>		mMediaQuery;
 	ds::SerialRunnable<NewsQuery>		mNewsQuery;
+	ds::SerialRunnable<ThreatQuery>		mThreatQuery;
 
 };
 

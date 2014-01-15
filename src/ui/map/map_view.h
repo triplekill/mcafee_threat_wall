@@ -4,14 +4,12 @@
 
 #include <ds/app/event_client.h>
 #include <ds/ui/sprite/sprite.h>
+#include "model/country_time.h"
 
 namespace mcafee {
 class Globals;
+class CountryView;
 
-/**
- * \class mcafee::TableView
- * \brief The root superclass for the table.
- */
 class MapView : public ds::ui::Sprite
 {
 public:
@@ -26,10 +24,13 @@ private:
 	typedef ds::ui::Sprite	inherited;
 	Globals&				mGlobals;
 	ds::EventClient			mEventClient;
-	float					mSpeed;
+
+	ds::ui::Sprite*							mCountryHolder;
+	std::vector<CountryView*>				mCountries;
+	std::map<std::wstring, CountryView*>	mCountryLookup;
 
 };
 
 } // namespace mcafee
 
-#endif // UI_TABLE_TABLEVIEW_H_
+#endif
