@@ -58,6 +58,12 @@
     <Filter Include="Source Files\ui\circles">
       <UniqueIdentifier>{2300c847-d7b7-40e8-9f49-2368b91ad3c5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\ui\clock">
+      <UniqueIdentifier>{5e7ef83d-0383-4fc9-ba6a-eac1c5cc24af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ui\threat_search">
+      <UniqueIdentifier>{371f93d0-d64d-4041-8d8f-ebfc7d126c08}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\app\globals.h">
@@ -138,6 +144,21 @@
     <ClInclude Include="..\src\ui\circles\threat_circles.h">
       <Filter>Source Files\ui\circles</Filter>
     </ClInclude>
+    <ClInclude Include="..\src\ui\video_player\video_player_view.h">
+      <Filter>Source Files\ui\video_player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ui\clock\clock_view.h">
+      <Filter>Source Files\ui\clock</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ui\threat_search\threat_search_view.h">
+      <Filter>Source Files\ui\threat_search</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\events\state_events.h">
+      <Filter>Source Files\events</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ui\video_player\video_thumbnail.h">
+      <Filter>Source Files\ui\video_player</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Resources.rc">
@@ -210,6 +231,21 @@
     </ClCompile>
     <ClCompile Include="..\src\ui\circles\threat_circles.cpp">
       <Filter>Source Files\ui\circles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ui\video_player\video_player_view.cpp">
+      <Filter>Source Files\ui\video_player</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ui\clock\clock_view.cpp">
+      <Filter>Source Files\ui\clock</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ui\threat_search\threat_search_view.cpp">
+      <Filter>Source Files\ui\threat_search</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\events\state_events.cpp">
+      <Filter>Source Files\events</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ui\video_player\video_thumbnail.cpp">
+      <Filter>Source Files\ui\video_player</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

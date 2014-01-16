@@ -28,7 +28,7 @@ ThreatItem::ThreatItem( Globals& g, LatestThreatModel& ltm)
 	mThreatTitle.setPosition(touchPadding, touchPadding - 1.0f);
 
 	setSize(touchPadding * 2.0f + mThreatTitle.getWidth(), touchPadding * 2.0f + mThreatTitle.getHeight());
-	setColor(backy);
+	setColorA(ci::ColorA(backy.r, backy.g, backy.b, 1.0));
 	enable(true);
 	enableMultiTouch(ds::ui::MULTITOUCH_INFO_ONLY);
 

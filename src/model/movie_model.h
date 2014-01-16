@@ -12,16 +12,16 @@ public:
 	MovieModel(){};
 	const int					getDbId() const { return mId; }
 	const std::wstring&			getTitle() const { return mTitle;}
-	const std::wstring&			getMovie() const { return mMovie;} 
-	const std::wstring&			getThumbnail() const { return mThumbnail;} 
+	const std::string&			getMovie() const { return mMovie;} 
+	const std::string&			getThumbnail() const { return mThumbnail;} 
 
 private:
 	friend class				MediaQuery;
 
 	int							mId;
 	std::wstring				mTitle;
-	std::wstring				mMovie;
-	std::wstring				mThumbnail;
+	std::string					mMovie;
+	std::string					mThumbnail;
 };
 
 } // namespace mcafee

@@ -27,4 +27,24 @@
 	<float name="latest:threat:y_padding" value="0" />
 	<color name="latest:threat:background" r="0" g="0" b="0" />
 	
+	<!-- threat search -->
+	<point name="search:button:offset" x="70" y="1090" />
+	<float name="search:title:offset" value="4" />
+	
+	<!-- video player -->
+	<point name="video:button:offset" x="70" y="1175" />
+	<float name="video:title:offset" value="4" />
+	<point name="video:player:offset" x="683" y="0"/>
+	<point name="video:thumbnails:offset" x="20" y="1200" />
+	
+	<!-- Clock -->
+	<text  name="clock:24_hour" value="true" />
+	<point name="clock:offset" x="2300" y="100" />
+	<point name="clock:ampm:offset" x="12" y="25" />
+	<float name="clock:hour:width" value="106"/>
+	<float name="clock:min:width" value="120"/>
+	<float name="clock:min:offset" value="115"/>
+	<float name="clock:time:y_offset" value="8"/>
+	
+	
 </settings>

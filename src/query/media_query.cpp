@@ -38,8 +38,8 @@ void MediaQuery::query() {
 		MovieModel m;
 		m.mId =it.getInt(0);
 		m.mTitle = it.getWString(1);
-		m.mThumbnail = it.getWString(2);
-		m.mMovie = it.getWString(3);
+		m.mThumbnail = it.getString(2);
+		m.mMovie = it.getString(3);
 		mOutput.push_back(m);
 		++it;
 	}

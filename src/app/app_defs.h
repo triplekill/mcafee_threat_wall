@@ -16,6 +16,7 @@ extern const std::string&		SETTINGS_KEYBOARD;
 extern const std::string&		SETTINGS_TEXT;
 
 // FONTS
+extern const std::string&		FONT_DS_DIGI;
 extern const std::string&		FONT_FRUTIGER_EXTRA_BOLD_CONDENSED; //  FRUTIEBC.TTF
 extern const std::string&		FONT_FRUTIGER_BOLD_CONDENSED; //FRUTIGBC.TTF
 extern const std::string&		FONT_FRUTIGER_ROMAN; //FRUTIG01.TTF

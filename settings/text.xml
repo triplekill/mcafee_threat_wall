@@ -1,5 +1,6 @@
 <settings>
 	<!-- Available fonts: 
+	const std::string		_FONT_DS_DIGI("ds-digi");
 	const std::string		_FONT_FRUTIGER_EXTRA_BOLD_CONDENSED("frutiger-extra-bold-condensed");
 	const std::string		_FONT_FRUTIGER_BOLD_CONDENSED("frutiger-bold-condensed");
 	const std::string		_FONT_FRUTIGER_ROMAN("frutiger-roman");
@@ -35,5 +36,22 @@
 		<float name="latest:threat:size" value="21" />
 		<float name="latest:threat:leading" value="0.75" />
 		<color name="latest:threat:color" r="255" g="255" b="255" />
+		
+	<!-- lefthand nav text (video + threat search) -->
+		<text  name="nav:title:name" value="frutiger-light" />
+		<float name="nav:title:size" value="33" />
+		<float name="nav:title:leading" value="0.75" />
+		<color name="nav:title:color" r="255" g="255" b="255" />
 
+	<!-- clock -->
+		<text  name="clock:time:name" value="ds-digi" />
+		<float name="clock:time:size" value="72" />
+		<float name="clock:time:leading" value="0.75" />
+		<color name="clock:time:color" r="15" g="15" b="15" />
+		
+	<!-- video player -->	
+		<text  name="video:thumb:name" value="frutiger-bold" />
+		<float name="video:thumb:size" value="12" />
+		<float name="video:thumb:leading" value="0.75" />
+		<color name="video:thumb:color" r="255" g="255" b="255" />
 </settings>

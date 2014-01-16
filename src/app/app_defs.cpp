@@ -11,6 +11,7 @@ namespace {
 	const std::string		SETTINGS_TEXT_("text");
 
 	// FONTS
+	const std::string		_FONT_DS_DIGI("ds-digi");
 	const std::string		_FONT_FRUTIGER_EXTRA_BOLD_CONDENSED("frutiger-extra-bold-condensed");
 	const std::string		_FONT_FRUTIGER_BOLD_CONDENSED("frutiger-bold-condensed");
 	const std::string		_FONT_FRUTIGER_ROMAN("frutiger-roman");
@@ -38,6 +39,7 @@ const std::string&			SETTINGS_KEYBOARD = SETTINGS_KEYBOARD_;
 const std::string&			SETTINGS_TEXT = SETTINGS_TEXT_;
 
 // FONTS
+const std::string&			FONT_DS_DIGI = _FONT_DS_DIGI;
 const std::string&			FONT_FRUTIGER_EXTRA_BOLD_CONDENSED = _FONT_FRUTIGER_EXTRA_BOLD_CONDENSED;
 const std::string&			FONT_FRUTIGER_BOLD_CONDENSED = _FONT_FRUTIGER_BOLD_CONDENSED;
 const std::string&			FONT_FRUTIGER_ROMAN = _FONT_FRUTIGER_ROMAN;

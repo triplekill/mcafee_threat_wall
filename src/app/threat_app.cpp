@@ -7,9 +7,12 @@
 #include <ds/ui/sprite/image.h>
 #include <ds/util/string_util.h>
 
+#include "ui/clock/clock_view.h"
 #include "ui/map/map_view.h"
 #include "ui/ticker/ticker_view.h"
 #include "ui/latest_threats/latest_threats_view.h"
+#include "ui/video_player/video_player_view.h"
+#include "ui/threat_search/threat_search_view.h"
 
 #include "app/app_defs.h"
 #include "events/media_events.h"
@@ -36,6 +39,7 @@ ThreatApp::ThreatApp()
 #endif
 	mEngine.loadTextCfg("text.xml");
 
+	mEngine.editFonts().install(ds::Environment::getAppFolder("data", "fonts/ds-digi.ttf"), FONT_DS_DIGI);
 	mEngine.editFonts().install(ds::Environment::getAppFolder("data", "fonts/FRUTIEBC.TTF"), FONT_FRUTIGER_EXTRA_BOLD_CONDENSED);
 	mEngine.editFonts().install(ds::Environment::getAppFolder("data", "fonts/FRUTIGBC.TTF"), FONT_FRUTIGER_BOLD_CONDENSED);
 	mEngine.editFonts().install(ds::Environment::getAppFolder("data", "fonts/FRUTIG01.TTF"), FONT_FRUTIGER_ROMAN);
@@ -62,12 +66,20 @@ void ThreatApp::setupServer() {
 	MapView* mv = new MapView(mGlobals);
 	rootSprite.addChild(*mv);
 
-	TickerView* tv = new TickerView(mGlobals);
-	rootSprite.addChild(*tv);
+	ClockView* cv = new ClockView(mGlobals);
+	rootSprite.addChild(*cv);
 
 	LatestThreatsView* ltv = new LatestThreatsView(mGlobals);
 	rootSprite.addChild(*ltv);
 
+	ThreatSearchView* tsv = new ThreatSearchView(mGlobals);
+	rootSprite.addChild(*tsv);
+
+	VideoPlayerView* vpv = new VideoPlayerView(mGlobals);
+	rootSprite.addChild(*vpv);
+
+	TickerView* tv = new TickerView(mGlobals);
+	rootSprite.addChild(*tv);
 }
 
 void ThreatApp::keyDown(KeyEvent e) {

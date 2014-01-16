@@ -117,7 +117,7 @@ void MapView::loadCountries(){
 
 	}
 
-	for (int i = 0; i < 64; i++){
+	for (int i = 0; i < 20; i++){
 		ThreatCircles* tc = new ThreatCircles(mGlobals);
 		mCountryHolder->addChild(*tc);
 		mThreatCircles.push_back(tc);

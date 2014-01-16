@@ -52,7 +52,8 @@ void ThreatCircles::updateServer( const ds::UpdateParams& p){
 
 	if(mPlaying){
 		Poco::Timestamp::TimeVal now = Poco::Timestamp().epochMicroseconds();
-		if((float)(now - mPrevPlayTime) / 1000000.0f > 1/15.0f){
+		if((float)(now - mPrevPlayTime) / 1000000.0f > 1/60.0f){
+			mPrevPlayTime = now;
 			mCurPosition++;
 
 			for (auto it = mImages.begin(); it < mImages.end(); ++it){
