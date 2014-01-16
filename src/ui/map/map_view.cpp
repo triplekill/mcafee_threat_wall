@@ -9,13 +9,16 @@
 
 #include "app/globals.h"
 #include "app/app_defs.h"
+#include "events/threat_events.h"
 #include "model/country_time.h"
 #include "ui/map/country_view.h"
+#include "ui/circles/threat_circles.h"
 
 namespace mcafee {
 MapView::MapView( Globals& g)
 	: inherited(g.mEngine)
 	, mGlobals(g)
+	, mShowCircles(false)
 	, mEventClient(g.mEngine.getNotifier(),	[this](const ds::Event* e) { if (e) this->onAppEvent(*e); })
 {
 	ci::Color mcAfeeRed = mEngine.getEngineCfg().getSettings(SETTINGS_LAYOUT).getColor("mcafee:red",0, ci::Color(1.0f, 0.0f, 0.0f));
@@ -93,6 +96,14 @@ void MapView::loadCountries(){
 		ct.mVirusPosition		 = ci::Vec3f(it.getFloat(5), it.getFloat(6), 0.0f);
 		ct.mVirusPositionTwo	 = ci::Vec3f(it.getFloat(7), it.getFloat(8), 0.0f);
 		ct.mVirusPositionThree	 = ci::Vec3f(it.getFloat(9), it.getFloat(10), 0.0f);
+
+		if(ct.mVirusPositionTwo.x < 1 && ct.mVirusPositionTwo.y < 1){
+			ct.mNumVirusPositions = 1;
+		} else if(ct.mVirusPositionThree.x < 1 && ct.mVirusPositionThree.y < 1){
+			ct.mNumVirusPositions = 2;
+		} else {
+			ct.mNumVirusPositions = 3;
+		}
 		mCountryTimeLemonade.push_back(ct);
 		++it;
 	}
@@ -102,16 +113,60 @@ void MapView::loadCountries(){
 		cv->setPosition((*tit).getPosition());
 		mCountryHolder->addChild(*cv);
 		mCountryLookup[(*tit).getCountryCode()] = cv;
+		mCountries.push_back(cv);
+
+	}
+
+	for (int i = 0; i < 64; i++){
+		ThreatCircles* tc = new ThreatCircles(mGlobals);
+		mCountryHolder->addChild(*tc);
+		mThreatCircles.push_back(tc);
 	}
 }
 
-void mcafee::MapView::onAppEvent( const ds::Event& e){
-
+void mcafee::MapView::onAppEvent( const ds::Event& in_e){
+	if(in_e.mWhat == ShowThreat::WHAT()){
+		const ShowThreat& e((const ShowThreat&)in_e);
+		highlightThreat(e.mThreat);
+	}
 }
 
 void mcafee::MapView::updateServer( const ds::UpdateParams& p){
 	inherited::updateServer(p);
 
+	if(mShowCircles){
+		const std::vector<ThreatDataModel>& tdm(mCurrentLatestThreat.getThreatData());
+		for (auto it = tdm.begin(); it < tdm.end(); ++it){
+			if(rand()%10000 > 9950){
+				for (auto cit = mThreatCircles.begin(); cit < mThreatCircles.end(); ++cit){
+					if(!(*cit)->playing()){
+						auto tit = mCountryLookup.find((*it).getCountry());
+						if(tit != mCountryLookup.end()){
+							(*cit)->setPosition(tit->second->getCountryModel().getVirusPosition());
+							(*cit)->play();
+						}
+						break; // stop looking for a non-playing threat circle
+					}
+				}
+			}
+		}
+	}
+}
+
+void mcafee::MapView::highlightThreat(const LatestThreatModel& ltm){
+	mCurrentLatestThreat = ltm;
+	mShowCircles = true;
+	for (auto it = mCountries.begin() ; it < mCountries.end(); ++it){
+		(*it)->unhighlight();
+	}
+
+	const std::vector<ThreatDataModel>& tdm(ltm.getThreatData());
+	for (auto it = tdm.begin(); it < tdm.end(); ++it){
+		auto tit = mCountryLookup.find((*it).getCountry());
+		if(tit != mCountryLookup.end()){
+			tit->second->highlight();
+		}
+	}
 }
 
 }

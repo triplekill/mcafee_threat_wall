@@ -7,8 +7,8 @@
 	<float name="ticker:y_pos" value="0.9" />
 	<float name="ticker:speed" value="90.0" />
 	<!-- in pixels -->
-	<float name="ticker:background:y_offset" value="-9.0" />
-	<float name="ticker:background:height" value="30.0" />
+	<float name="ticker:background:y_offset" value="-12.0" />
+	<float name="ticker:background:height" value="36.0" />
 	<float name="ticker:line:width" value="1.0" />
 	<!-- -->
 	

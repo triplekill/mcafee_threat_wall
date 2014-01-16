@@ -16,6 +16,8 @@ public:
 	void					highlight();
 	void					unhighlight();
 
+	CountryTime&			getCountryModel() { return mCountryModel; }
+
 private:
 
 

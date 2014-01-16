@@ -6,6 +6,7 @@
 #include <ds/app/environment.h>
 #include <ds/debug/logger.h>
 #include <ds/query/query_client.h>
+#include <ds/ui/tween/tweenline.h>
 
 #include "app/globals.h"
 #include "app/app_defs.h"
@@ -22,8 +23,17 @@ CountryView::CountryView( Globals& g, CountryTime& model)
 	ds::ui::Image* highlight = new ds::ui::Image(mEngine, ds::Environment::getAppFolder("data/images/", mCountryModel.getImagePath()));
 	addChild(*highlight);
 
-	//setOpacity(0.0f);
+	setOpacity(0.0f);
 
+
+}
+
+void CountryView::highlight(){
+	mEngine.getTweenline().apply(*this, ANIM_OPACITY(), 1.0f, 0.25f);
+}
+
+void CountryView::unhighlight(){
+	mEngine.getTweenline().apply(*this, ANIM_OPACITY(), 0.0f, 0.25f);
 
 }
 

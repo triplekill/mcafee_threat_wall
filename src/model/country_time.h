@@ -7,14 +7,29 @@ namespace mcafee {
 	class CountryTime {
 	public:
 
-		CountryTime(){};
+		CountryTime(): mNumVirusPositions(1), mCurVirusPosition(0){};
 		const std::wstring&			getCountryCode() const { return mCountryCode;}
 		const std::string&			getImagePath() const { return mImagePath;} 
 		const std::wstring&			getCountryName() const { return mCountryName;} 
 		const ci::Vec3f&			getPosition() const { return mPosition; }
-		const ci::Vec3f&			getVirusPosition() const { return mVirusPosition; }
-		const ci::Vec3f&			getVirusPositionTwo() const { return mVirusPositionTwo; }
-		const ci::Vec3f&			getVirusPositionThree() const { return mVirusPositionThree; }
+		ci::Vec3f&					getVirusPosition() {
+			if(mNumVirusPositions == 1){
+				return mVirusPosition;
+			} else {
+				mCurVirusPosition++;
+				if(mCurVirusPosition > mNumVirusPositions - 1){
+					mCurVirusPosition = 0;
+				}
+
+				if(mCurVirusPosition == 0){
+					return mVirusPosition;
+				} else if(mCurVirusPosition == 1){
+					return mVirusPositionTwo;
+				} else {
+					return mVirusPositionThree;
+				}
+			}
+		}
 
 	private:
 		friend class				MapView;
@@ -23,6 +38,8 @@ namespace mcafee {
 		std::string					mImagePath;
 		std::wstring				mCountryName;
 		ci::Vec3f					mPosition;
+		int							mNumVirusPositions;
+		int							mCurVirusPosition;
 		ci::Vec3f					mVirusPosition;
 		ci::Vec3f					mVirusPositionTwo;
 		ci::Vec3f					mVirusPositionThree;

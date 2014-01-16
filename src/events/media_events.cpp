@@ -2,9 +2,6 @@
 
 namespace mcafee {
 
-/**
- * \class mcafee::OpenMediaPanelEvent
- */
 static ds::EventRegistry    SHOW_MOVIE_EVENT("ShowMovieEvent");
 
 int ShowMovie::WHAT() {

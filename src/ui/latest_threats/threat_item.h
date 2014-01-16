@@ -17,6 +17,8 @@ namespace mcafee {
 		void					highlight();
 		void					unhighlight();
 
+		LatestThreatModel&		getModel(){ return mLatestThreatModel; }
+
 	private:
 		typedef ds::ui::Sprite	inherited;
 		Globals&				mGlobals;

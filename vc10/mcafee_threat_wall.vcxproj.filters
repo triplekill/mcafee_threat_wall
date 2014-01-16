@@ -52,6 +52,12 @@
     <Filter Include="Source Files\ui\latest_threats">
       <UniqueIdentifier>{a127f717-83e9-487d-98d5-3790e038366c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\ui\button">
+      <UniqueIdentifier>{e5be30c4-fb57-4927-9fe7-9e0e754d8a2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ui\circles">
+      <UniqueIdentifier>{2300c847-d7b7-40e8-9f49-2368b91ad3c5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\app\globals.h">
@@ -123,6 +129,15 @@
     <ClInclude Include="..\src\model\threat_data_model.h">
       <Filter>Source Files\model</Filter>
     </ClInclude>
+    <ClInclude Include="..\src\events\threat_events.h">
+      <Filter>Source Files\events</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ui\button\image_button.h">
+      <Filter>Source Files\ui\button</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\ui\circles\threat_circles.h">
+      <Filter>Source Files\ui\circles</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Resources.rc">
@@ -186,6 +201,15 @@
     </ClCompile>
     <ClCompile Include="..\src\query\threat_query.cpp">
       <Filter>Source Files\query</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\events\threat_events.cpp">
+      <Filter>Source Files\events</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ui\button\image_button.cpp">
+      <Filter>Source Files\ui\button</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ui\circles\threat_circles.cpp">
+      <Filter>Source Files\ui\circles</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

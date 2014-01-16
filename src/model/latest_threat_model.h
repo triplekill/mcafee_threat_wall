@@ -4,6 +4,7 @@
 
 
 #include <cinder/Vector.h>
+#include <vector>
 #include "model/threat_data_model.h"
 
 namespace mcafee {
@@ -14,15 +15,16 @@ namespace mcafee {
 	public:
 
 		LatestThreatModel(){};
-		const std::wstring&			getName() const { return mName;}
-		const int					getThreatId() const { return mThreatId; }
+		const std::wstring&					getName() const { return mName;}
+		const int							getThreatId() const { return mThreatId; }
+		const std::vector<ThreatDataModel>&	getThreatData() const {return mThreatData; }
 
 	private:
-		friend class				ThreatQuery;
+		friend class						ThreatQuery;
 
-		std::wstring					mName;
-		int								mThreatId;
-		std::vector<ThreatDataModel>	mThreatData;
+		std::wstring						mName;
+		int									mThreatId;
+		std::vector<ThreatDataModel>		mThreatData;
 	};
 
 } // namespace mcafee

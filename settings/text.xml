@@ -32,7 +32,7 @@
 	
 	<!-- Latest Threats -->	
 		<text  name="latest:threat:name" value="frutiger-bold" />
-		<float name="latest:threat:size" value="16" />
+		<float name="latest:threat:size" value="21" />
 		<float name="latest:threat:leading" value="0.75" />
 		<color name="latest:threat:color" r="255" g="255" b="255" />
 
